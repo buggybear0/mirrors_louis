@@ -15,6 +15,8 @@ int main(int argc, char** argv)
     case1.mirrorPositions_[{4,4}] = 1;
     int result = case1.solve();
     cout << result << endl;
+    cout << case1.resultIntersection_[0] << endl;
+    cout << case1.resultIntersection_[1] << endl;
 
 
     return 0;

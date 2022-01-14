@@ -30,6 +30,7 @@ namespace std
         else if (currentDirection_ == "up")
         {
             currentPoint_[0]-= 1;
+            cout << "lol" << endl;
         }
         else if (currentDirection_ == "down")
         {

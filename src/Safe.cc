@@ -106,17 +106,23 @@ namespace std
             {
                 for (int i = 0 ; i < verticalSegmentsCount; i++)
                 {
+                    cout << "index" << endl;
+                    cout << k << endl;
+                    cout << i << endl;
+                    cout << verticalSegments.at(i)[1] << endl;
+                    cout << horizontalSegments.at(k)[1] << endl;
 
                     if (horizontalSegments.at(k)[0] >= verticalSegments.at(i)[0] and horizontalSegments.at(k)[0] <= verticalSegments.at(i)[2])
                     {
                         cout << "daaaaaaaaaaa" << endl;
-                        if (verticalSegments.at(i)[1] <= horizontalSegments.at(k)[3] and verticalSegments.at(i)[1] >= horizontalSegments.at(k)[1])
+                        if (verticalSegments.at(i)[1] >= horizontalSegments.at(k)[1])
                         {
                             cout << "hooooo" << endl;
 
-                            vector<int> intersection{2};
-                            intersection[0] = horizontalSegments.at(k)[0];
-                            intersection[1] = verticalSegments.at(i)[0];
+                            vector<int> intersection = {horizontalSegments.at(k)[0], verticalSegments.at(i)[1]};
+                            cout << intersection[0] << endl;
+                            cout << intersection[1] << endl;
+
                             intersectionMap_[indexIntersection_] = intersection;
                             indexIntersection_ = indexIntersection_ + 1;
                         }
@@ -206,11 +212,21 @@ namespace std
             int result1 = computeIntersection(forwardTrace.horizontalSegments_, backTrace.verticalSegments_);
             cout << "hi" << endl;
             int result2 = computeIntersection(backTrace.horizontalSegments_, forwardTrace.verticalSegments_);
+            cout << "tatatata" << endl;
+            cout << backTrace.verticalSegments_.at(0)[2] << endl;
+            cout << backTrace.verticalSegments_.at(0)[3] << endl;
+            cout << forwardTrace.horizontalSegments_.at(1)[2] << endl;
+            cout << forwardTrace.horizontalSegments_.at(1)[3] << endl;
             if (result1 == 2 or result2 == 2)
             {
+                cout << "haloa" << endl;
                 cout << intersectionMap_.size() << endl;
                 cout << indexIntersection_ << endl;
-                resultIntersection_ = computeLexiFirst(intersectionMap_[0], intersectionMap_[1]);
+                cout << "here" << endl;
+                cout << intersectionMap_.at(1)[0] << endl;
+                cout << intersectionMap_.at(1)[1] << endl;
+                cout << "here2" << endl;
+                resultIntersection_ = computeLexiFirst(intersectionMap_.at(0), intersectionMap_.at(1));
                 return 2;
             }
             else
