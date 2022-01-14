@@ -1,0 +1,1 @@
+/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/launch_me.dir/src/LaserBeam.cc.o CMakeFiles/launch_me.dir/src/Safe.cc.o CMakeFiles/launch_me.dir/src/main.cc.o  -o launch_me 

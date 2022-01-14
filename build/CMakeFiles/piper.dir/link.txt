@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpiper.a  CMakeFiles/piper.dir/src/LaserBeam.cc.o CMakeFiles/piper.dir/src/Safe.cc.o
+/usr/bin/ranlib libpiper.a

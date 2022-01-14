@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/piper_editor.dir/src/main.cc.o  -o piper_editor  libpiper.a 

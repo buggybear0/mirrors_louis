@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/LaserBeam.h
+iostream
+-
+unordered_map
+-
+vector
+-
+map
+-
+memory
+-
+
+../include/Safe.h
+LaserBeam.h
+../include/LaserBeam.h
+
+/home/louis.burguieres/wdc_workspace/Mirrors/src/Safe.cc
+Safe.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/Safe.h
+

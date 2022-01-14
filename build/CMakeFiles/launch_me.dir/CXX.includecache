@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/louis.burguieres/wdc_workspace/Mirrors/src/LaserBeam.cc
+LaserBeam.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/LaserBeam.h
+Safe.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/Safe.h
+
+/home/louis.burguieres/wdc_workspace/Mirrors/src/Safe.cc
+LaserBeam.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/LaserBeam.h
+Safe.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/Safe.h
+
+/home/louis.burguieres/wdc_workspace/Mirrors/src/main.cc
+iostream
+-
+cstdio
+-
+LaserBeam.h
+/home/louis.burguieres/wdc_workspace/Mirrors/src/LaserBeam.h
+
