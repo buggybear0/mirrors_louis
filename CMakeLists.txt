@@ -1,6 +1,6 @@
 
 cmake_minimum_required( VERSION 2.8 )
-project (piper)
+project (mirrors)
 
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -16,19 +16,18 @@ set(piper_lib_src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/Safe.cc
 )
 
-set(piper_editor_src
+set(mirrorlaunch_src
     ${CMAKE_CURRENT_SOURCE_DIR}/src/main.cc
 )
 
-add_library(piper ${piper_lib_src})
-target_include_directories(piper PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
-target_compile_options(piper PRIVATE -Wall)
+add_library(mirrors ${piper_lib_src})
+target_include_directories(mirrors PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+target_compile_options(mirrors PRIVATE -Wall)
 
-add_executable(piper_editor ${piper_editor_src})
-target_link_libraries(piper_editor piper)
-target_compile_options(piper_editor PRIVATE -Wall)
+add_executable(mirrorlaunch ${mirrorlaunch_src})
+target_link_libraries(mirrorlaunch mirrors)
+target_compile_options(mirrorlaunch PRIVATE -Wall)
 
 # Install the executable
-install(TARGETS   piper  DESTINATION lib)
-install(TARGETS   piper_editor DESTINATION bin)
+install(TARGETS   mirrorlaunch DESTINATION bin)
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/data  DESTINATION bin)
